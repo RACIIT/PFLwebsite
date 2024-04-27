@@ -6,6 +6,10 @@ import logo5 from "../Assets/raptors.PNG";
 import logo6 from "../Assets/stags.PNG";
 import logo7 from "../Assets/tusker.PNG";
 import logo8 from "../Assets/valiente.PNG";
+import logo9 from "../Assets/Falcon.png";
+import logo10 from "../Assets/Seahawk.png";
+import logo11 from "../Assets/Panther.png";
+import logo12 from "../Assets/Phoenix.png";
 
 function getLogoByTeam(clubName) {
     if (!clubName || clubName.trim() === "") {
@@ -29,6 +33,14 @@ function getLogoByTeam(clubName) {
         return { logo: logo7, color: "#FF5733" }; // Example color
       case "VALIENTE":
         return { logo: logo8, color: "#33FF57" }; // Example color
+      case "FALCON":
+        return { logo: logo9, color: "#33FF57" }; // Example color
+      case "SEAHAWK":
+        return { logo: logo10, color: "#33FF57" }; // Example color
+      case "PANTHER":
+        return { logo: logo11, color: "#33FF57" }; // Example color
+      case "PHOENIX":
+        return { logo: logo12, color: "#33FF57" }; // Example color  
       default:
         return null;
     }
