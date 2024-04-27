@@ -69,14 +69,14 @@ export default function Create() {
                     alt="Logo"
                   />
                   <p>{match[0]}</p>
-                  <p>{match[4]}</p>
+                  <p style={{marginLeft: "10rem",}}>{match[4]}</p>
                 </div>
                 <h1 style={{ color: "white" }}>Vs</h1>
                 <div
                   className="away-club"
-                  style={{ display: "flex", justifyContent: "flex-end" }}
+                 
                 >
-                  <p>{match[5]}</p>
+                  <p style={{marginLeft: "2rem",}}>{match[5]}</p>
                   <p className="score">{match[1]}</p>
                   <img
                     src={getLogoByTeam(match[1]).logo}
@@ -122,6 +122,7 @@ export default function Create() {
                     width: "50px",
                     height: "50px",
                     marginTop: "-2px",
+                    color:"#fff"
                   }}
                   alt="Logo"
                 />

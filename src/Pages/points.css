@@ -85,3 +85,6 @@ body {
     right           : -5px;
     top             : 0;
 }
+.card-header{
+    font-size: 1rem;
+}

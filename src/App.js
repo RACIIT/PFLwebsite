@@ -6,6 +6,7 @@ import Points from "./Pages/Points";
 import Create from "./Pages/Create";
 import Match from "./Pages/Match";
 import Schedule from "./Pages/Schedule";
+import WomansPoints from "./Pages/WomansPoints";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Points />} />
+        <Route path="/women" element={<WomansPoints/>} />
         <Route path="/createClub" element={<Create />} />
         <Route path="/addMatch" element={<Match />} />
         <Route path="/matches" element={<Schedule />} />

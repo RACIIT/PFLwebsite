@@ -1,7 +1,7 @@
 .home-club {
     display         : flex;
     align-items     : center;
-    background-color: rgb(143, 143, 143);
+    /* background-color: rgb(143, 143, 143); */
     max-height      : 6vh;
     width           : 60vh;
     border-radius   : 20px;
@@ -24,7 +24,7 @@
 .away-club {
     display         : flex;
     align-items     : center;
-    background-color: rgb(143, 143, 143);
+    /* background-color: rgb(143, 143, 143); */
     max-height      : 6vh;
     width           : 60vh;
     border-radius   : 20px;

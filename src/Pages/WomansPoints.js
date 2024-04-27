@@ -3,7 +3,7 @@ import pflText from "../Assets/main.png";
 import Spinner from "react-bootstrap/Spinner";
 import "./points.css";
 import getLogoByTeam from "./constants";
-export default function Points() {
+export default function WomansPoints() {
   const [teamRow, setTeamRow] = useState([]);
   const [teamData, setTeamData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -12,7 +12,7 @@ export default function Points() {
 
   useEffect(() => {
     setLoading(true);
-    fetch('https://sheets.googleapis.com/v4/spreadsheets/1E5ZSCPJY3Fc4_qqsGTNjHhRhDodRo0H-r7r_2i6tFVA/values/MenPoints?alt=json&key=AIzaSyCPTSkOEQz2OmZNRlrhxXZPMqVgebH9X_I')
+    fetch('https://sheets.googleapis.com/v4/spreadsheets/1E5ZSCPJY3Fc4_qqsGTNjHhRhDodRo0H-r7r_2i6tFVA/values/WomenPoints?alt=json&key=AIzaSyCPTSkOEQz2OmZNRlrhxXZPMqVgebH9X_I')
       .then(response => response.json())
       .then(data => {
         const values = data.values;
@@ -88,8 +88,8 @@ export default function Points() {
                 <div className="main-table">
                   {teamRow.length > 0 && ( // Check if teamRow has been fetched and is not empty
                     <>
-                      <p className="card-header pos">{teamRow[0]?.[0]}</p>
-                      <p className="card-header name">{teamRow[0]?.[1]}</p>
+                      <p className="card-header ">{teamRow[0]?.[0]}</p>
+                      <p className="card-header">{teamRow[0]?.[1]}</p>
                       <p className="card-header">{teamRow[0]?.[2]}</p>
                       <p className="card-header">{teamRow[0]?.[3]}</p>
                       <p className="card-header">{teamRow[0]?.[4]}</p>
