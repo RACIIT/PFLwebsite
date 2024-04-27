@@ -1,11 +1,37 @@
 import pflText from "../Assets/text.png";
+import { useEffect, useState } from "react";
 import "./schedule.css";
 // import logo9 from "../Assets/football.png";
 import logo10 from "../Assets/timer.png";
 import logo11 from "../Assets/court.png";
-import matchSchedule from "./matchSchedule.json";
+import logo1 from "../Assets/akela.PNG";
+import logo2 from "../Assets/ceros.PNG";
+import logo3 from "../Assets/grizzly.PNG";
+import logo4 from "../Assets/hydra.PNG";
+import logo5 from "../Assets/raptors.PNG";
+import logo6 from "../Assets/stags.PNG";
+import logo7 from "../Assets/tusker.PNG";
+import logo8 from "../Assets/valiente.PNG";
 
 export default function Create() {
+  const [matchSchedule, setMatchSchedule] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch('https://sheets.googleapis.com/v4/spreadsheets/1E5ZSCPJY3Fc4_qqsGTNjHhRhDodRo0H-r7r_2i6tFVA/values/Matches?alt=json&key=AIzaSyCPTSkOEQz2OmZNRlrhxXZPMqVgebH9X_I')
+      .then(response => response.json())
+      .then(data => {
+        const values = data.values;
+        // const transposedData = transpose(values);
+        console.log("data>>>>>>>>>>", values[2]);
+        setMatchSchedule(values);
+        setLoading(false);
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  }, []);
+
+  
   return (
     <div style={{ marginBottom: "20px" }}>
       <img
@@ -28,7 +54,7 @@ export default function Create() {
         <h1
           style={{
             marginTop: "40px",
-            backgroundColor: "#138ce8",
+            // backgroundColor: "#138ce8",
             width: "300px",
             textAlign: "center",
             height: "70px",
@@ -40,9 +66,8 @@ export default function Create() {
           Group Matches
         </h1>
       </div>
-      {matchSchedule.map((x) => {
-        const isResultAvailable = x.hGoals !== "" || x.aGoals !== "";
-
+      {matchSchedule.slice(1).map((match) => {
+        const isResultAvailable = match.hGoals !== "" || match.aGoals !== "";
         return (
           <>
             <div
@@ -65,30 +90,30 @@ export default function Create() {
               >
                 <div className="home-club">
                   <img
-                    src={x.homeLogo}
+                    src={getLogoByTeam(match[0]).logo}
                     style={{
                       width: "80px",
-                      backgroundColor: x.hColor,
+                      // backgroundColor: x.hColor,
                       borderRadius: "20px",
                       padding: "5px",
                     }}
                     alt="Logo"
                   />
-                  <p>{x.homeClub}</p>
-                  <p>{x.hGoals}</p>
+                  <p>{match[0]}</p>
+                  <p>3</p>
                 </div>
                 <h1 style={{ color: "white" }}>Vs</h1>
                 <div
                   className="away-club"
                   style={{ display: "flex", justifyContent: "flex-end" }}
                 >
-                  <p>{x.aGoals}</p>
-                  <p className="score">{x.awayClub}</p>
+                  <p>3</p>
+                  <p className="score">{match[1]}</p>
                   <img
-                    src={x.awayLogo}
+                    src={getLogoByTeam(match[1]).logo}
                     style={{
                       width: "80px",
-                      backgroundColor: x.aColor,
+                      // backgroundColor: x.aColor,
                       borderRadius: "20px",
                       padding: "5px",
                     }}
@@ -120,7 +145,7 @@ export default function Create() {
                     fontWeight: "bold",
                   }}
                 >
-                  {x.time}
+                  {match[2]}
                 </p>
                 <img
                   src={logo11}
@@ -139,7 +164,7 @@ export default function Create() {
                     fontWeight: "bold",
                   }}
                 >
-                  {x.court}
+                  {match[3]}
                 </p>
               </div>
             </div>
@@ -149,3 +174,33 @@ export default function Create() {
     </div>
   );
 }
+
+
+
+function getLogoByTeam(clubName) {
+  if (!clubName || clubName.trim() === "") {
+    return null; // Return null if clubName is empty or whitespace
+  }
+
+  switch (clubName.toUpperCase()) {
+    case "AKELA":
+      return { logo: logo1, color: "#FF5733" }; 
+    case "CEROS":
+      return { logo: logo2, color: "#33FF57" }; 
+    case "GRIZZLY":
+      return { logo: logo3, color: "#5733FF" }; 
+    case "HYDRA":
+      return { logo: logo4, color: "#FF3357" }; 
+    case "RAPTORS":
+      return { logo: logo5, color: "#57FF33" }; 
+    case "STAGS":
+      return { logo: logo6, color: "#3357FF" }; 
+    case "TUSKER":
+      return { logo: logo7, color: "#FF5733" }; 
+    case "VALIENTE":
+      return { logo: logo8, color: "#33FF57" }; 
+    default:
+      return null;
+  }
+}
+

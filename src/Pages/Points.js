@@ -2,15 +2,7 @@ import { useEffect, useState } from "react";
 import pflText from "../Assets/pflt.png";
 import Spinner from "react-bootstrap/Spinner";
 import "./points.css";
-import logo1 from "../Assets/akela.PNG";
-import logo2 from "../Assets/ceros.PNG";
-import logo3 from "../Assets/grizzly.PNG";
-import logo4 from "../Assets/hydra.PNG";
-import logo5 from "../Assets/raptors.PNG";
-import logo6 from "../Assets/stags.PNG";
-import logo7 from "../Assets/tusker.PNG";
-import logo8 from "../Assets/valiente.PNG";
-
+import getLogoByTeam from "./constants";
 export default function Points() {
   const [teamRow, setTeamRow] = useState([]);
   const [teamData, setTeamData] = useState([]);
@@ -116,7 +108,7 @@ export default function Points() {
                     <p className="card-header pos">{index + 1}</p>
                     <p className="card-header name">
                       <img
-                        src={getLogoByTeam(team[1])} // Assuming team[1] contains the clubName
+                        src={getLogoByTeam(team[1]).logo} // Assuming team[1] contains the clubName
                         style={{
                           width: "44px",
                           marginRight: "10px",
@@ -149,30 +141,3 @@ export default function Points() {
 
 
 }
-function getLogoByTeam(clubName) {
-  if (!clubName || clubName.trim() === "") {
-    return null; // Return null if clubName is empty or whitespace
-  }
-
-  switch (clubName.toUpperCase()) {
-    case "AKELA":
-      return logo1;
-    case "CEROS":
-      return logo2;
-    case "GRIZZLY":
-      return logo3;
-    case "HYDRA":
-      return logo4;
-    case "RAPTORS":
-      return logo5;
-    case "STAGS":
-      return logo6;
-    case "TUSKER":
-      return logo7;
-    case "VALIENTE":
-      return logo8;
-    default:
-      return null;
-  }
-}
-
