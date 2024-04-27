@@ -1,4 +1,3 @@
-import pflText from "../Assets/main.png";
 import { useEffect, useState } from "react";
 import "./schedule.css";
 // import logo9 from "../Assets/football.png";
@@ -16,7 +15,7 @@ export default function Create() {
       .then(data => {
         const values = data.values;
         // const transposedData = transpose(values);
-        console.log("data>>>>>>>>>>", values[2]);
+        console.log("data>>>>>>>>>>", loading);
         setMatchSchedule(values);
         setLoading(false);
       })
