@@ -5,7 +5,6 @@ import "./points.css";
 import getLogoByTeam from "./constants";
 export default function Points() {
   const [teamRow, setTeamRow] = useState([]);
-  const [teamData, setTeamData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isGreenColor, setIsGreenColor] = useState(false); // Controlling the color
 
@@ -59,7 +58,7 @@ export default function Points() {
     </div>);
   } else {
     return (
-      <div>
+      <div className="table-container">
         {loading ? (
           <div
             style={{
@@ -80,10 +79,11 @@ export default function Points() {
                 display: "block",
                 margin: "auto",
                 width: "300px",
-                marginTop: "90px",
+                marginTop: "10rem",
+                marginBottom:"4rem",
               }}
             />
-            <div class="lanscape" style={{ marginTop: "50px" }}>
+            <div style={{ marginTop: "50px" }}>
               <div style={{ display: "flex", justifyContent: "center", marginBottom: "15px" }}>
                 <div className="main-table">
                   {teamRow.length > 0 && ( // Check if teamRow has been fetched and is not empty
@@ -110,15 +110,15 @@ export default function Points() {
                       <img
                         src={getLogoByTeam(team[1]).logo} // Assuming team[1] contains the clubName
                         style={{
-                          width: "44px",
+                          width: "4.3rem",
                           marginRight: "10px",
                           backgroundColor: team.color, // Assuming there's a color property in team
-                          borderRadius: "50px",
+                          // borderRadius: "50px",
                           padding: "5px",
                         }}
                         alt="Logo"
                       />
-                      {team[1]} {/* Assuming team[1] contains the clubName */}
+                    
                     </p>
                     <p className="card-header">{team[2]}</p>
                     <p className="card-header">{team[3]}</p>

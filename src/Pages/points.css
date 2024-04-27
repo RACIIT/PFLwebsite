@@ -1,42 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap");
 
 body {
-    font-family: 'Lora', serif;
+    /* font-family: 'Lora', serif; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@media screen and (orientation: portrait) and (min-device-width: 768px) {
-    body {
-      transform: rotate(-90deg);
-      transform-origin: left top;
-      width: 100vh; /* Use 100vh to ensure full screen */
-      height: 100vw; /* Use 100vw to ensure full screen */
-      overflow-x: hidden; /* Hide horizontal scrollbar */
-      position: absolute; /* Ensure page takes full height of viewport */
-      top: 100%; /* Move the page to the bottom to align with viewport */
-      left: 0;
-      margin: 0; /* Remove any default margin */
-    }
-}    
 
+.table-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+   
+}
+
+@media (max-width: 768px) {
+    .table-container{
+      width: 250vw;
+    }
+  }
 .main-table {
     display              : grid;
     grid-template-columns: repeat(10, 1fr);
     align-items          : center;
-    background-color     : rgb(27, 129, 219);
+    background-color     : rgba(22, 187, 157, 0.757);
     min-height           : 6vh;
     width                : 140vh;
-    border-radius        : 50px;
+    border-radius        : 10px;
     font-weight          : 600;
 }
 
 .main-table p {
+    width:auto;
     text-align: center;
     position  : relative;
 }
 
 .main-table .name {
-    min-width: 200px;
+    min-width: 100px;
     text-align: left;
+    padding:3px;
     margin-left: 25px;
 }
 
@@ -57,7 +57,7 @@ body {
     background-color     : rgb(2, 19, 33);
     min-height           : 6vh;
     width                : 140vh;
-    border-radius        : 50px;
+    border-radius        : 10px;
     color                : #fff;
 }
 
@@ -71,7 +71,7 @@ body {
 }
 
 .table .name {
-    min-width: 200px;
+    /* min-width: calc(10vw); */
     text-align: left;
     margin-left: 25px;
 }
@@ -87,4 +87,5 @@ body {
 }
 .card-header{
     font-size: 1rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
