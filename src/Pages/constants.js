@@ -34,7 +34,8 @@ function getLogoByTeam(clubName) {
       case "VALIENTE":
         return { logo: logo8, color: "#f6ff00" }; // Example color
       case "FALCON":
-        return { logo: logo9, color: "#001eff" }; // Example color
+
+        return { logo: logo9, color: "#00008B" }; // Example color
       case "SEAHAWK":
         return { logo: logo10, color: "#008080" }; // Example color
       case "PANTHER":

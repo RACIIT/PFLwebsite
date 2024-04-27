@@ -4,7 +4,7 @@ import "./schedule.css";
 import logo10 from "../Assets/timer.png";
 import logo11 from "../Assets/court.png";
 import { Spinner } from "react-bootstrap";
-import VSPanel from "./Vspanel/VSPanel";
+import VSPanel from "./vspanelfolder/VSPanel";
 export default function Create() {
   const [matchSchedule, setMatchSchedule] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -49,11 +49,11 @@ export default function Create() {
       >
         
       </div>
-      {matchSchedule.slice(1).map((match) => {
+      {matchSchedule.slice(1).map((match,index) => {
         const isResultAvailable = (match[4] && match[5]);
         return (
           <>
-          <VSPanel homeTeam={(match[0])} awayTeam={match[1]} homeGoals={3} awayGoals={4}/>
+          <VSPanel homeTeam={(match[0])} awayTeam={match[1]} homeGoals={3} awayGoals={4} key={index}/>
             {/* <div
               style={{
                 backgroundColor: isResultAvailable ? "green" : "#0d446f",

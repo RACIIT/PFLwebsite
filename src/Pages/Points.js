@@ -113,7 +113,7 @@ export default function Points() {
                           width: "4.3rem",
                           marginRight: "10px",
                           backgroundColor: team.color, // Assuming there's a color property in team
-                          borderRadius: "50px",
+                          // borderRadius: "50px",
                           padding: "5px",
                         }}
                         alt="Logo"

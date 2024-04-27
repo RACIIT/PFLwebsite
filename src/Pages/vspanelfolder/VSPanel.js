@@ -16,7 +16,7 @@ const VSPanel = ({ homeTeam, awayTeam, homeGoals, awayGoals }) => {
             <span className="vs-text">VS</span>
             <span className="team-goals">{homeGoals}</span>
           </div>
-          <div class="match-details">
+          <div className="match-details">
             <span>Time: 9:30pm</span>
             <span>Court 2</span>
           </div>

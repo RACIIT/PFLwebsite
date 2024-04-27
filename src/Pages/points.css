@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap");
 
 body {
-    font-family: 'Lora', serif;
+    /* font-family: 'Lora', serif; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -19,21 +20,23 @@ body {
     display              : grid;
     grid-template-columns: repeat(10, 1fr);
     align-items          : center;
-    background-color     : rgba(12, 129, 47, 0.757);
+    background-color     : rgba(22, 187, 157, 0.757);
     min-height           : 6vh;
     width                : 140vh;
-    border-radius        : 50px;
+    border-radius        : 10px;
     font-weight          : 600;
 }
 
 .main-table p {
+    width:auto;
     text-align: center;
     position  : relative;
 }
 
 .main-table .name {
-    /* min-width: 200px; */
+    min-width: 100px;
     text-align: left;
+    padding:3px;
     margin-left: 25px;
 }
 
@@ -54,7 +57,7 @@ body {
     background-color     : rgb(2, 19, 33);
     min-height           : 6vh;
     width                : 140vh;
-    border-radius        : 50px;
+    border-radius        : 10px;
     color                : #fff;
 }
 
@@ -84,4 +87,5 @@ body {
 }
 .card-header{
     font-size: 1rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
