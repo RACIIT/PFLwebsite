@@ -1,23 +1,31 @@
 import pflText from "../Assets/main.png";
+import { useEffect, useState } from "react";
 import "./schedule.css";
 // import logo9 from "../Assets/football.png";
 import logo10 from "../Assets/timer.png";
 import logo11 from "../Assets/court.png";
-import matchSchedule from "./matchSchedule.json";
-
+import getLogoByTeam from "./constants";
 export default function Create() {
+  const [matchSchedule, setMatchSchedule] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch('https://sheets.googleapis.com/v4/spreadsheets/1E5ZSCPJY3Fc4_qqsGTNjHhRhDodRo0H-r7r_2i6tFVA/values/Matches?alt=json&key=AIzaSyCPTSkOEQz2OmZNRlrhxXZPMqVgebH9X_I')
+      .then(response => response.json())
+      .then(data => {
+        const values = data.values;
+        // const transposedData = transpose(values);
+        console.log("data>>>>>>>>>>", values[2]);
+        setMatchSchedule(values);
+        setLoading(false);
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  }, []);
+
+  
   return (
-    <div style={{ marginBottom: "20px" }}>
-      <img
-        src={pflText}
-        alt="Logo"
-        style={{
-          display: "block",
-          margin: "auto",
-          width: "300px",
-          marginTop: "90px",
-        }}
-      />
+    <div style={{ marginBottom: "6rem",marginTop: "10rem", }}>
       <div
         style={{
           display: "flex",
@@ -25,24 +33,10 @@ export default function Create() {
           alignItems: "center",
         }}
       >
-        <h1
-          style={{
-            marginTop: "40px",
-            backgroundColor: "#138ce8",
-            width: "300px",
-            textAlign: "center",
-            height: "70px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          Group Matches
-        </h1>
+        
       </div>
-      {matchSchedule.map((x) => {
-        const isResultAvailable = x.hGoals !== "" || x.aGoals !== "";
-
+      {matchSchedule.slice(1).map((match) => {
+        const isResultAvailable = (match[4] && match[5]);
         return (
           <>
             <div
@@ -65,30 +59,30 @@ export default function Create() {
               >
                 <div className="home-club">
                   <img
-                    src={x.homeLogo}
+                    src={getLogoByTeam(match[0]).logo}
                     style={{
                       width: "80px",
-                      backgroundColor: x.hColor,
+                      backgroundColor: getLogoByTeam(match[0]).color,
                       borderRadius: "20px",
                       padding: "5px",
                     }}
                     alt="Logo"
                   />
-                  <p>{x.homeClub}</p>
-                  <p>{x.hGoals}</p>
+                  <p>{match[0]}</p>
+                  <p>{match[4]}</p>
                 </div>
                 <h1 style={{ color: "white" }}>Vs</h1>
                 <div
                   className="away-club"
                   style={{ display: "flex", justifyContent: "flex-end" }}
                 >
-                  <p>{x.aGoals}</p>
-                  <p className="score">{x.awayClub}</p>
+                  <p>{match[5]}</p>
+                  <p className="score">{match[1]}</p>
                   <img
-                    src={x.awayLogo}
+                    src={getLogoByTeam(match[1]).logo}
                     style={{
                       width: "80px",
-                      backgroundColor: x.aColor,
+                      backgroundColor: getLogoByTeam(match[1]).color,
                       borderRadius: "20px",
                       padding: "5px",
                     }}
@@ -120,7 +114,7 @@ export default function Create() {
                     fontWeight: "bold",
                   }}
                 >
-                  {x.time}
+                  {match[2]}
                 </p>
                 <img
                   src={logo11}
@@ -139,7 +133,7 @@ export default function Create() {
                     fontWeight: "bold",
                   }}
                 >
-                  {x.court}
+                  {match[3]}
                 </p>
               </div>
             </div>
@@ -149,3 +143,4 @@ export default function Create() {
     </div>
   );
 }
+

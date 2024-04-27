@@ -40,6 +40,17 @@
     min-width   : 150px;
 }
 
+.heading {
+    margin-top: 40px; /* Changed marginTop to margin-top */
+    width: 300px;
+    font-weight: 800;
+    text-align: center; /* Changed textAlign to text-align */
+    height: 70px;
+    display: flex;
+    justify-content: center; /* Changed justifyContent to justify-content */
+    align-items: center; /* Changed alignItems to align-items */
+}
+
 
 .away-club img {
     margin-right: -30px;
