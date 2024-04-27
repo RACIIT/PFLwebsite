@@ -1,0 +1,46 @@
+.home-club {
+    display         : flex;
+    align-items     : center;
+    background-color: rgb(143, 143, 143);
+    max-height      : 6vh;
+    width           : 60vh;
+    border-radius   : 20px;
+    font-weight     : 600;
+    margin-right    : 20px;
+}
+
+.home-club img {
+    margin-left: -50px;
+}
+
+.home-club p {
+    color      : #fff;
+    margin-top : 15px;
+    margin-left: 10px;
+    font-size  : 40px;
+    min-width  : 150px;
+}
+
+.away-club {
+    display         : flex;
+    align-items     : center;
+    background-color: rgb(143, 143, 143);
+    max-height      : 6vh;
+    width           : 60vh;
+    border-radius   : 20px;
+    font-weight     : 600;
+    margin-left     : 20px;
+}
+
+.away-club p {
+    color       : #fff;
+    margin-top  : 15px;
+    margin-right: 0px;
+    font-size   : 40px;
+    min-width   : 150px;
+}
+
+
+.away-club img {
+    margin-right: -30px;
+}

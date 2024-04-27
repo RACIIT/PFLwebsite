@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Route, Routes } from "react-router-dom";
+import Points from "./Pages/Points";
+import Create from "./Pages/Create";
+import Match from "./Pages/Match";
+import Schedule from "./Pages/Schedule";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Points />} />
+        <Route path="/createClub" element={<Create />} />
+        <Route path="/addMatch" element={<Match />} />
+        <Route path="/matches" element={<Schedule />} />
+      </Routes>
+    </>
   );
 }
 

@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap");
+
+body {
+    font-family: 'Lora', serif;
+}
+
+.main-table {
+    display              : grid;
+    grid-template-columns: repeat(10, 1fr);
+    align-items          : center;
+    background-color     : rgb(27, 129, 219);
+    min-height           : 6vh;
+    width                : 140vh;
+    border-radius        : 50px;
+    font-weight          : 600;
+}
+
+.main-table p {
+    text-align: center;
+    position  : relative;
+}
+
+.main-table .name {
+    min-width: 200px;
+    text-align: left;
+    margin-left: 25px;
+}
+
+.main-table p:not(:last-child):after {
+    content         : '';
+    position        : absolute;
+    height          : 100%;
+    width           : 1px;
+    background-color: #fff;
+    right           : -5px;
+    top             : 0;
+}
+
+.table {
+    display              : grid;
+    grid-template-columns: repeat(10, 1fr);
+    align-items          : center;
+    background-color     : rgb(2, 19, 33);
+    min-height           : 6vh;
+    width                : 140vh;
+    border-radius        : 50px;
+    color                : #fff;
+}
+
+.green-row {
+    background-color: green;
+  }
+
+.table p {
+    text-align: center;
+    position  : relative;
+}
+
+.table .name {
+    min-width: 200px;
+    text-align: left;
+    margin-left: 25px;
+}
+
+.table p:not(:last-child):after {
+    content         : '';
+    position        : absolute;
+    height          : 100%;
+    width           : 1px;
+    background-color: #fff;
+    right           : -5px;
+    top             : 0;
+}

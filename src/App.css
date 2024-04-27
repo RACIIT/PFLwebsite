@@ -1,38 +1,232 @@
-.App {
-  text-align: center;
+body {
+  background-image : url("Assets/soccer-player.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.createTeamBox {
+  display        : flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items    : center;
+  min-height     : 65vh;
 }
 
-.App-link {
-  color: #61dafb;
+.addMatchBox {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  min-height     : 73vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box {
+  position        : relative;
+  width           : 380px;
+  height          : 500px;
+  background-color: #021b2e;
+  border-radius   : 8px;
+}
+
+.matchBox {
+  position        : relative;
+  width           : 380px;
+  height          : 600px;
+  background-color: #021b2e;
+  border-radius   : 8px;
+}
+
+.box form {
+  position      : absolute;
+  inset         : 4px;
+  background    : #0d446f;
+  border-radius : 8px;
+  z-index       : 2;
+  display       : flex;
+  flex-direction: column;
+  padding       : 50px 40px;
+}
+
+.matchBox form {
+  position      : absolute;
+  inset         : 4px;
+  background    : #0d446f;
+  border-radius : 8px;
+  z-index       : 2;
+  display       : flex;
+  flex-direction: column;
+  padding       : 50px 40px;
+}
+
+.box form .createTeam {
+  position  : relative;
+  width     : 300px;
+  margin-top: 35px;
+}
+
+.matchBox form .addMatch {
+  position  : relative;
+  width     : 300px;
+  margin-top: 35px;
+}
+
+.box form .createTeam input {
+  position      : relative;
+  width         : 100%;
+  padding       : 20px 10px 10px;
+  background    : transparent;
+  outline       : none;
+  border        : none;
+  box-shadow    : none;
+  color         : #021b2e;
+  font-size     : 1em;
+  letter-spacing: 0.05em;
+  transition    : 0.5s;
+  z-index       : 10;
+}
+
+.matchBox form .addMatch input {
+  position      : relative;
+  width         : 100%;
+  padding       : 20px 10px 10px;
+  background    : transparent;
+  outline       : none;
+  border        : none;
+  box-shadow    : none;
+  color         : #021b2e;
+  font-size     : 1em;
+  letter-spacing: 0.05em;
+  transition    : 0.5s;
+  z-index       : 10;
+}
+
+.matchBox form .addMatch select {
+  position      : relative;
+  width         : 100%;
+  padding       : 20px 10px 10px;
+  background    : transparent;
+  outline       : none;
+  border        : none;
+  box-shadow    : none;
+  color         : rgb(228, 221, 221);
+  font-size     : 1em;
+  letter-spacing: 0.05em;
+  transition    : 0.5s;
+  z-index       : 10;
+}
+
+.box form .createTeam span {
+  position      : absolute;
+  left          : 0;
+  padding       : 20px 0px 10px;
+  pointer-events: none;
+  color         : rgb(228, 221, 221);
+  font-size     : 1em;
+  letter-spacing: 0.05em;
+  transition    : 0.5s;
+}
+
+.matchBox form .addMatch span {
+  position      : absolute;
+  left          : 0;
+  padding       : 20px 0px 10px;
+  pointer-events: none;
+  color         : rgb(228, 221, 221);
+  font-size     : 1em;
+  letter-spacing: 0.05em;
+  transition    : 0.5s;
+}
+
+.box form .createTeam input:valid~span,
+.box form .createTeam input:focus~span {
+  color    : #fff;
+  font-size: 0.75em;
+  transform: translateY(-34px);
+}
+
+.matchBox form .addMatch input:valid~span,
+.matchBox form .addMatch input:focus~span {
+  color    : #fff;
+  font-size: 0.75em;
+  transform: translateY(-34px);
+}
+
+.matchBox form .addMatch select:valid~span,
+.matchBox form .addMatch select:focus~span {
+  color    : #fff;
+  font-size: 0.75em;
+  transform: translateY(-34px);
+}
+
+.box form .createTeam i {
+  position        : absolute;
+  left            : 0;
+  bottom          : 0;
+  width           : 100%;
+  height          : 2px;
+  background-color: #fff;
+  border-radius   : 4px;
+  overflow        : hidden;
+  transition      : 0.5s;
+  pointer-events  : none;
+}
+
+.matchBox form .addMatch i {
+  position        : absolute;
+  left            : 0;
+  bottom          : 0;
+  width           : 100%;
+  height          : 2px;
+  background-color: #fff;
+  border-radius   : 4px;
+  overflow        : hidden;
+  transition      : 0.5s;
+  pointer-events  : none;
+}
+
+.box form .createTeam input:valid~i,
+.box form .createTeam input:focus~i {
+  height: 44px;
+}
+
+.matchBox form .addMatch input:valid~i,
+.matchBox form .addMatch input:focus~i {
+  height: 44px;
+}
+
+.box form input[type="submit"] {
+  border          : none;
+  outline         : none;
+  padding         : 9px 25px;
+  background-color: #fff;
+  font-size       : 0.9em;
+  border-radius   : 4px;
+  font-weight     : 600;
+  width           : 200px;
+  margin-top      : 50px;
+  margin-left     : 40px;
+}
+
+.matchBox form input[type="submit"] {
+  border          : none;
+  outline         : none;
+  padding         : 9px 25px;
+  background-color: #fff;
+  font-size       : 0.9em;
+  border-radius   : 4px;
+  font-weight     : 600;
+  width           : 200px;
+  margin-top      : 70px;
+  margin-left     : 40px;
+}
+
+.matchBox h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin            : 0;
 }
