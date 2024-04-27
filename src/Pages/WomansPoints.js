@@ -48,6 +48,7 @@ export default function WomansPoints() {
   if (teamRow === null) {
     return (<div
       style={{
+        zIndex: 200,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -58,7 +59,7 @@ export default function WomansPoints() {
     </div>);
   } else {
     return (
-      <div>
+      <div className="table-container">
         {loading ? (
           <div
             style={{
@@ -109,7 +110,7 @@ export default function WomansPoints() {
                       <img
                         src={getLogoByTeam(team[1]).logo} // Assuming team[1] contains the clubName
                         style={{
-                          width: "44px",
+                          width: "4.3rem",
                           marginRight: "10px",
                           backgroundColor: team.color, // Assuming there's a color property in team
                           borderRadius: "50px",
@@ -117,7 +118,7 @@ export default function WomansPoints() {
                         }}
                         alt="Logo"
                       />
-                      {team[1]} {/* Assuming team[1] contains the clubName */}
+                    
                     </p>
                     <p className="card-header">{team[2]}</p>
                     <p className="card-header">{team[3]}</p>

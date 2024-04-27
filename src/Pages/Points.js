@@ -59,7 +59,7 @@ export default function Points() {
     </div>);
   } else {
     return (
-      <div>
+      <div className="table-container">
         {loading ? (
           <div
             style={{
@@ -110,7 +110,7 @@ export default function Points() {
                       <img
                         src={getLogoByTeam(team[1]).logo} // Assuming team[1] contains the clubName
                         style={{
-                          width: "44px",
+                          width: "4.3rem",
                           marginRight: "10px",
                           backgroundColor: team.color, // Assuming there's a color property in team
                           borderRadius: "50px",
@@ -118,7 +118,7 @@ export default function Points() {
                         }}
                         alt="Logo"
                       />
-                      {team[1]} {/* Assuming team[1] contains the clubName */}
+                    
                     </p>
                     <p className="card-header">{team[2]}</p>
                     <p className="card-header">{team[3]}</p>

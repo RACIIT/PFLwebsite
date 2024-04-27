@@ -40,7 +40,7 @@ function getLogoByTeam(clubName) {
       case "PANTHER":
         return { logo: logo11, color: "#000000" }; // Example color
       case "PHOENIX":
-        return { logo: logo12, color: "#33FF57" }; // Example color  
+        return { logo: logo12, color: "#dc143c" }; // Example color  
       default:
         return null;
     }
