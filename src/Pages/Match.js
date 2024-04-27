@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import pflText from "../Assets/text.png";
+import pflText from "../Assets/main.png";
 
 export default function Match() {
   const [homeClub, setHomeClub] = useState("");

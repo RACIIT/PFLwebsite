@@ -1,0 +1,43 @@
+[
+    {
+      "club": "Hydra",
+      "logo": "/static/media/hydra.83b2bb7eda5c9a747aeb.PNG",
+      "color": "#db6b0f"
+    },
+    {
+      "club": "Ceros",
+      "logo": "/static/media/ceros.40273f3fbe4af48c30cc.PNG",
+      "color": "#34ed5c"
+    },
+    {
+      "club": "Tusker",
+      "logo": "/static/media/tusker.a250ca408d31d1caa96d.PNG",
+      "color": "#cfe627"
+    },
+    {
+      "club": "Akela",
+      "logo": "/static/media/akela.1c479476ecfea703fde8.PNG",
+      "color": "#6b2e7d"
+    },
+    {
+      "club": "Raptors",
+      "logo": "/static/media/raptors.7a9d71eb915192aca6e4.PNG",
+      "color": "#1a20d9"
+    },
+    {
+      "club": "Grizzly",
+      "logo": "/static/media/grizzly.0668bfec9a8b94dc7045.PNG",
+      "color": "#546357"
+    },
+    {
+      "club": "Valiente",
+      "logo": "/static/media/valiente.6ea4769f4bb4d74bcc42.PNG",
+      "color": "#eb1c23"
+    },
+    {
+      "club": "Stags",
+      "logo": "/static/media/stags.39c06521b46830688df6.PNG",
+      "color": "#cf0dd6"
+    }
+  ]
+  

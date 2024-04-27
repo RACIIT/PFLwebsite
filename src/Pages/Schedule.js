@@ -1,4 +1,4 @@
-import pflText from "../Assets/text.png";
+import pflText from "../Assets/main.png";
 import "./schedule.css";
 // import logo9 from "../Assets/football.png";
 import logo10 from "../Assets/timer.png";

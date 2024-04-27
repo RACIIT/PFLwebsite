@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import pflText from "../Assets/pflt.png";
+import pflText from "../Assets/main.png";
 import Spinner from "react-bootstrap/Spinner";
 import "./points.css";
 import logo1 from "../Assets/akela.PNG";

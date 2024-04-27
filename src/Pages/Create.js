@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "../App.css";
-import pflText from "../Assets/text.png";
+import pflText from "../Assets/main.png";
 
 export default function Create() {
   const [clubName, setClubName] = useState("");
