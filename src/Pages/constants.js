@@ -18,27 +18,27 @@ function getLogoByTeam(clubName) {
   
     switch (clubName.toUpperCase()) {
       case "AKELA":
-        return { logo: logo1, color: "#FF5733" }; // Example color
+        return { logo: logo1, color: "#4e0044" }; // Example color
       case "CEROS":
-        return { logo: logo2, color: "#33FF57" }; // Example color
+        return { logo: logo2, color: "#60e58c" }; // Example color
       case "GRIZZLY":
-        return { logo: logo3, color: "#5733FF" }; // Example color
+        return { logo: logo3, color: "#6b6b6b" }; // Example color
       case "HYDRA":
-        return { logo: logo4, color: "#FF3357" }; // Example color
+        return { logo: logo4, color: "#ff0000" }; // Example color
       case "RAPTORS":
-        return { logo: logo5, color: "#57FF33" }; // Example color
+        return { logo: logo5, color: "#001eff" }; // Example color
       case "STAGS":
-        return { logo: logo6, color: "#3357FF" }; // Example color
+        return { logo: logo6, color: "#ff00d8" }; // Example color
       case "TUSKER":
-        return { logo: logo7, color: "#FF5733" }; // Example color
+        return { logo: logo7, color: "#ff7800" }; // Example color
       case "VALIENTE":
-        return { logo: logo8, color: "#33FF57" }; // Example color
+        return { logo: logo8, color: "#f6ff00" }; // Example color
       case "FALCON":
-        return { logo: logo9, color: "#33FF57" }; // Example color
+        return { logo: logo9, color: "#dc143c" }; // Example color
       case "SEAHAWK":
-        return { logo: logo10, color: "#33FF57" }; // Example color
+        return { logo: logo10, color: "#008080" }; // Example color
       case "PANTHER":
-        return { logo: logo11, color: "#33FF57" }; // Example color
+        return { logo: logo11, color: "#000000" }; // Example color
       case "PHOENIX":
         return { logo: logo12, color: "#33FF57" }; // Example color  
       default:
