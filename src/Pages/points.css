@@ -4,6 +4,20 @@ body {
     font-family: 'Lora', serif;
 }
 
+@media screen and (orientation: landscape) and (max-device-width: 368px) {
+    body {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh; /* Use 100vh to ensure full screen */
+      height: 100vw; /* Use 100vw to ensure full screen */
+      overflow-x: hidden; /* Hide horizontal scrollbar */
+      position: absolute; /* Ensure page takes full height of viewport */
+      top: 100%; /* Move the page to the bottom to align with viewport */
+      left: 0;
+      margin: 0; /* Remove any default margin */
+    }
+}    
+
 .main-table {
     display              : grid;
     grid-template-columns: repeat(10, 1fr);

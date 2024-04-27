@@ -83,7 +83,7 @@ export default function Points() {
                 marginTop: "90px",
               }}
             />
-            <div style={{ marginTop: "50px" }}>
+            <div class="lanscape" style={{ marginTop: "50px" }}>
               <div style={{ display: "flex", justifyContent: "center", marginBottom: "15px" }}>
                 <div className="main-table">
                   {teamRow.length > 0 && ( // Check if teamRow has been fetched and is not empty
