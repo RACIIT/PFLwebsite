@@ -81,9 +81,11 @@ export default function WomansPoints() {
                 margin: "auto",
                 width: "300px",
                 marginTop: "90px",
+                marginTop: "10rem",
+                marginBottom:"4rem",
               }}
             />
-            <div class="lanscape" style={{ marginTop: "50px" }}>
+            <div class="lanscape" style={{ marginTop: "50px" , margin: "3rem" }}>
               <div style={{ display: "flex", justifyContent: "center", marginBottom: "15px" }}>
                 <div className="main-table">
                   {teamRow.length > 0 && ( // Check if teamRow has been fetched and is not empty

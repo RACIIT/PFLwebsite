@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import "./schedule.css";
 // import logo9 from "../Assets/football.png";
-import logo10 from "../Assets/timer.png";
-import logo11 from "../Assets/court.png";
+
 import { Spinner } from "react-bootstrap";
 import VSPanel from "./vspanelfolder/VSPanel";
 export default function Create() {
@@ -39,7 +38,7 @@ export default function Create() {
   }
   
   return (
-    <div style={{ marginBottom: "6rem",marginTop: "10rem", }}>
+    <div style={{ marginBottom: "6rem",marginTop: "10rem", widows:window.outerWidth }}>
       <div
         style={{
           display: "flex",
@@ -49,11 +48,13 @@ export default function Create() {
       >
         
       </div>
+      <div className="container">
       {matchSchedule.slice(1).map((match,index) => {
         const isResultAvailable = (match[4] && match[5]);
         return (
           <>
-          <VSPanel homeTeam={(match[0])} awayTeam={match[1]} homeGoals={3} awayGoals={4} key={index}/>
+          
+          <VSPanel homeTeam={(match[0])} awayTeam={match[1]} homeGoals={match[4]} awayGoals={match[5]} time={match[2]} court={match[3]} key={index}/>
             {/* <div
               style={{
                 backgroundColor: isResultAvailable ? "green" : "#0d446f",
@@ -156,6 +157,8 @@ export default function Create() {
           </>
         );
       })}
+      </div>
+    
     </div>
   );
 }

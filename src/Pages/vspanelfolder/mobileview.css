@@ -1,0 +1,25 @@
+.vs-panel {
+    display: flex;
+    flex-direction: column; /* Default for mobile */
+  }
+  
+  @media (min-width: 768px) {  /* Change breakpoint as needed */
+    .vs-panel {
+      flex-direction: row; /* Change to row for larger screens */
+    }
+    .vs-panel > .team {
+      flex: 1;  /* Make teams take up equal space */
+    }
+    .vs-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .match-details {
+      flex-direction: row;
+    }
+    .icon-text {
+      margin-right: 1rem;
+    }
+  }
+  

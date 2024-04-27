@@ -80,7 +80,8 @@ export default function Points() {
                 display: "block",
                 margin: "auto",
                 width: "300px",
-                marginTop: "90px",
+                marginTop: "10rem",
+                marginBottom:"4rem",
               }}
             />
             <div class="lanscape" style={{ marginTop: "50px" }}>
