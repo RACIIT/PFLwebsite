@@ -5,7 +5,6 @@ import "./points.css";
 import getLogoByTeam from "./constants";
 export default function Points() {
   const [teamRow, setTeamRow] = useState([]);
-  const [teamData, setTeamData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isGreenColor, setIsGreenColor] = useState(false); // Controlling the color
 

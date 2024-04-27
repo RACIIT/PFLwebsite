@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './vspanel.css';
 // import "./mobileview.css"
 import getLogoByTeam from '../constants';

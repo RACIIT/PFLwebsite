@@ -1,9 +1,6 @@
 import React from 'react';
 import './vspanel.css';
 // import "./mobileview.css"
-import getLogoByTeam from '../constants';
-import timer from "../../Assets/timer.png";
-import courtimage from "../../Assets/court.png";
 import Scorecard from './scorecard';
 
 
