@@ -1,10 +1,10 @@
-import pflText from "../Assets/main.png";
 import { useEffect, useState } from "react";
 import "./schedule.css";
 // import logo9 from "../Assets/football.png";
 import logo10 from "../Assets/timer.png";
 import logo11 from "../Assets/court.png";
-import getLogoByTeam from "./constants";
+import { Spinner } from "react-bootstrap";
+import VSPanel from "./Vspanel/VSPanel";
 export default function Create() {
   const [matchSchedule, setMatchSchedule] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,13 +16,27 @@ export default function Create() {
       .then(data => {
         const values = data.values;
         // const transposedData = transpose(values);
-        console.log("data>>>>>>>>>>", values[2]);
+        console.log("data>>>>>>>>>>", loading);
         setMatchSchedule(values);
         setLoading(false);
       })
       .catch(error => console.error('Error fetching data:', error));
   }, []);
 
+
+  if(matchSchedule === null){
+    return (<div
+      style={{
+        zIndex: 200,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100vh",
+      }}
+    >
+      <Spinner animation="grow" variant="success" />
+    </div>);
+  }
   
   return (
     <div style={{ marginBottom: "6rem",marginTop: "10rem", }}>
@@ -39,7 +53,8 @@ export default function Create() {
         const isResultAvailable = (match[4] && match[5]);
         return (
           <>
-            <div
+          <VSPanel homeTeam={(match[0])} awayTeam={match[1]} homeGoals={3} awayGoals={4}/>
+            {/* <div
               style={{
                 backgroundColor: isResultAvailable ? "green" : "#0d446f",
                 maxWidth: "1400px",
@@ -137,7 +152,7 @@ export default function Create() {
                   {match[3]}
                 </p>
               </div>
-            </div>
+            </div> */}
           </>
         );
       })}

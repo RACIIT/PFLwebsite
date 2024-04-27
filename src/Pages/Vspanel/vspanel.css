@@ -1,0 +1,98 @@
+.vs-panel { /* Adjust the width to your preference */
+    background-color: rgba(2, 22, 123, 0.5); /* Using rgba for transparency */
+    padding: 2.1rem; /* Add padding to the VS panel */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .vs-panel {
+        /* width: calc(100vw + 60vw); */
+     
+      /* flex-direction: row; */
+      background-color: rgba(2, 22, 123, 0.9); 
+    }
+}
+  
+  .vs-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .vs-text {
+    font-size: 2em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #ffff; 
+    margin: 0 10px; /* Add margin around the VS text */
+  }
+  
+  .team {
+    display: flex;
+    align-items: center;
+  }
+  
+  .team-logo {
+    width: 10rem; /* Adjusted logo size */
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px rgba(111, 111, 111, 0.6);
+    margin-right: 10px; /* Add some space between logo and team name */
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .team-logo {
+      width: 6rem; /* Decreased logo size for smaller screens */
+    }
+  }
+  
+  
+  .team-name {
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333; /* Dark text color */
+    margin-right: 5px; /* Add some space between team name and goals */
+  }
+  
+  .team-goals {
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+    color: #ffff; /* Dark text color */
+    margin: 0 10px; /* Add margin around the goals */
+
+    
+  }
+
+  @media (max-width: 768px) {
+    .team-goals {
+    font-size: 3rem; /* Decreased logo size for smaller screens */
+    }
+    .vs-text {
+        font-size: 2rem; 
+    }
+
+  }
+  .match-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0; /* Light gray background color */
+  padding: 10px; /* Add padding */
+  border-radius: 10px;
+}
+
+.match-details span {
+  color: #333; /* Dark text color */
+  font-weight: bold;
+}
+
+/* Add some margin between the spans */
+.match-details span + span {
+  margin-left: 20px;
+}
