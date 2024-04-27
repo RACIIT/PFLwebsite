@@ -33,13 +33,13 @@ function getLogoByTeam(clubName) {
         return { logo: logo7, color: "#ff7800" }; // Example color
       case "VALIENTE":
         return { logo: logo8, color: "#f6ff00" }; // Example color
-      case "FALCON (W)":
+      case "FALCON":
         return { logo: logo9, color: "#dc143c" }; // Example color
-      case "SEAHAWK (W)":
+      case "SEAHAWK":
         return { logo: logo10, color: "#008080" }; // Example color
-      case "PANTHER (W)":
+      case "PANTHER":
         return { logo: logo11, color: "#000000" }; // Example color
-      case "PHOENIX (W)":
+      case "PHOENIX":
         return { logo: logo12, color: "#33FF57" }; // Example color  
       default:
         return null;
