@@ -15,8 +15,9 @@ export default function WomansPoints() {
       .then(response => response.json())
       .then(data => {
         const values = data.values;
-        // const transposedData = transpose(values);
-        console.log("data>>>>>>>>>>", values[2]);
+        // Sort the values array based on the points (last item)
+        values.sort((a, b) => b[b.length - 1] - a[a.length - 1]);
+        console.log("Sorted data:", values);
         setTeamRow(values);
         setLoading(false);
       })
