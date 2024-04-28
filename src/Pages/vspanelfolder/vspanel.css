@@ -1,5 +1,4 @@
 .vs-panel { /* Adjust the width to your preference */
-    background-color: rgba(2, 22, 123, 0.1); /* Using rgba for transparency */
     padding: 2.1rem; /* Add padding to the VS panel */
     box-sizing: border-box; /* Include padding in the width calculation */
     justify-content: space-between;
