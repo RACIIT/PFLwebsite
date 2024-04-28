@@ -127,7 +127,7 @@ export default function Points() {
                     <p className="card-header">{team[5]}</p>
                     <p className="card-header">{team[6]}</p>
                     <p className="card-header">{team[7]}</p>
-                    <p className="card-header">{team[8] - team[7]}</p>
+                    <p className="card-header">{team[8]}</p>
                     <p className="card-header">{team[9]}</p>
                   </div>
                 </div>
