@@ -27,7 +27,7 @@ function ColorSchemesExample() {
             <Nav.Link as={Link} to="/" eventKey="/">Men's Points</Nav.Link>
             {/* <Nav.Link as={Link} to="/createClub" eventKey="createClub">Create Club</Nav.Link>
             <Nav.Link as={Link} to="/addMatch" eventKey="addMatch">Add Match</Nav.Link> */}
-            <Nav.Link as={Link} to="/matches" eventKey="matches">Matches</Nav.Link>
+            <Nav.Link as={Link} to="/matches" eventKey="/matches">Matches</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
