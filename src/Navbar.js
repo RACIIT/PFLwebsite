@@ -18,7 +18,7 @@ function ColorSchemesExample() {
       <Navbar
         bg="dark"
         variant="dark"
-        style={{ position: "fixed", top: "0", width: "100%" }}
+        style={{ position: "fixed", top: "0", width: "100%" ,zIndex: 200,}}
       >
         <Container>
           <img src={logo} style={{ width: "100px" }} alt="Logo" />

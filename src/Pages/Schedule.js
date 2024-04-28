@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./schedule.css";
 import { Spinner } from "react-bootstrap";
 import Scorecard from "./vspanelfolder/scorecard";
-export default function Create() {
+export default function Schedule() {
   const [matchSchedule, setMatchSchedule] = useState([]);
   const [loading, setLoading] = useState(true);
 
