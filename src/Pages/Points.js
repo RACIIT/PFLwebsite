@@ -121,13 +121,13 @@ export default function Points() {
                       />
                     
                     </p>
-                    <p className="card-header">{team[2]}</p>
+                    <p className="card-header">{team[2].toString()}</p>
                     <p className="card-header">{team[3]}</p>
                     <p className="card-header">{team[4]}</p>
                     <p className="card-header">{team[5]}</p>
                     <p className="card-header">{team[6]}</p>
                     <p className="card-header">{team[7]}</p>
-                    <p className="card-header">{team[8] - team[7]}</p>
+                    <p className="card-header">{team[8]}</p>
                     <p className="card-header">{team[9]}</p>
                   </div>
                 </div>
