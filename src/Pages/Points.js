@@ -7,11 +7,11 @@ export default function Points() {
   const [teamRow, setTeamRow] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isGreenColor, setIsGreenColor] = useState(false); // Controlling the color
-
+  const ApiKey = process.env.REACT_APP_GOOGLE_API_KEY
 
   useEffect(() => {
     setLoading(true);
-    fetch('https://sheets.googleapis.com/v4/spreadsheets/1E5ZSCPJY3Fc4_qqsGTNjHhRhDodRo0H-r7r_2i6tFVA/values/MenPoints?alt=json&key=AIzaSyCPTSkOEQz2OmZNRlrhxXZPMqVgebH9X_I')
+    fetch(`https://sheets.googleapis.com/v4/spreadsheets/1E5ZSCPJY3Fc4_qqsGTNjHhRhDodRo0H-r7r_2i6tFVA/values/MenPoints?alt=json&key=${ApiKey}`)
       .then(response => response.json())
       .then(data => {
         const values = data.values;
